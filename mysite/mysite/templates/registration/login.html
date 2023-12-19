@@ -2,6 +2,12 @@
 
 {% block content %}
 
+<div class="title">
+  <img src="https://i.pinimg.com/originals/80/5d/92/805d9290bf80860153c6804cc0ed2d3a.gif" style="width:256px;">
+<h1>HARMONY</h1>
+</div>
+
+  <div class="card">
   {% if form.errors %}
     <p>Your username and password didn't match. Please try again.</p>
   {% endif %}
@@ -15,6 +21,7 @@
     {% endif %}
   {% endif %}
 
+  <h2>Please, login to continue</h2>
   <form method="post" action="{% url 'login' %}">
     {% csrf_token %}
     <table>
@@ -27,11 +34,9 @@
         <td>{{ form.password }}</td>
       </tr>
     </table>
-    <input type="submit" value="login">
+    <input type="submit" value="LOGIN" class="loginButton">
     <input type="hidden" name="next" value="{{ next }}">
   </form>
-
-  {# Assumes you set up the password_reset view in your URLconf #}
-  <p><a href="{% url 'password_reset' %}">Lost password?</a></p>
+</div>
 
 {% endblock %}
