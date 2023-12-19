@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2><b>Choose an experiment to start:</b></h2>
+<div class="experimentList">
+    {% for experiment in experiments %}
+    <a href="/relevance/{{ experiment.0 }}/{{ experiment.1 }}/{{ experiment.2 }}/{{ experiment.3 }}" style="text-decoration:none" >
+        <div class="{% if experiment.4 == experiment.5 %} cardDone {% else %} card {% endif %}">
+            <img src="https://cdn-icons-png.flaticon.com/512/3254/3254092.png" alt="Avatar" style="width:100px; text-color:red;">
+            <div class="container">
+                <h3><b>Experiment {{ forloop.counter }}</b></h3>
+                <h5>{{ experiment.0 }} {{ experiment.1 }} {{ experiment.2 }} {{ experiment.3 }}<h5>
+            </div>
+            <div class="progress">
+                <h3>{{ experiment.4 }} / {{ experiment.5 }}</h3>
+                <p>Done / Total</p>
+            </div>
+        </div>
+    </a>
+    {% endfor %}
+</div>
+{% endblock content %}

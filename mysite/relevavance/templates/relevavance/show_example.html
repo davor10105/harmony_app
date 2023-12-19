@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+<div class="explanation">
+    
+
+    <div class="image">
+        <img src={{ image }} alt="original image" />
+        <h2>Original Image</h2>
+    </div>
+    <div class="prediction">
+        <h3>
+            Model prediction is
+        </h3>
+        <h2>
+            <b>{{ prediction }}</b>
+        </h2>
+        <h3>
+            Select best suited relevance or choose "Neither" if both are of equal quality
+        </h3>
+    </div>
+
+    <div class="exampleCount">
+        <h2>
+        {{ num_labeled_examples }}
+    </h2>
+    <h3>Examples Done</h3>
+    <h2>
+        {{ num_examples }}
+    </h2>
+    <h3>
+        Examples Total
+    </h3>
+    </div>
+</div>
+<div class="imagesDiv">
+    
+    <a href="{% url 'annotate_example' dataset_name experiment_name cnnmodel_name relevancy_method_name example_index relevance_1_label %}">
+        <div class="{% if already_labeled == 0 %}
+            labeledImage
+            {% else %}
+            image
+            {% endif %}">
+            <img src={{ relevance_1_image }} alt="relevance map 1" />
+            <h2>Relevance 1</h2>
+        </div>
+    </a>
+
+    <a href="{% url 'annotate_example' dataset_name experiment_name cnnmodel_name relevancy_method_name example_index 'neither' %}">
+        <div class="{% if already_labeled == 1 %}
+            labeledImage
+            {% else %}
+            image
+            {% endif %}">
+            <img src="https://cdn-icons-png.flaticon.com/512/839/839947.png" alt="none"/>
+            <h2>Neither</h2>
+        </div>
+    </a>
+
+    <a href="{% url 'annotate_example' dataset_name experiment_name cnnmodel_name relevancy_method_name example_index relevance_2_label %}">
+        <div class="{% if already_labeled == 2 %}
+            labeledImage
+            {% else %}
+            image
+            {% endif %}">
+            <img src={{ relevance_2_image }} alt="relevance map 2" />
+            <h2>Relevance 2</h2>
+        </div>
+    </a>
+</div>
+
+{% if previous_example != None %}
+    <a href="{% url 'show_example' dataset_name experiment_name cnnmodel_name relevancy_method_name previous_example %}">
+    <div class="floatingButtonLeft">
+        <p>< Prev</p>
+    </div>
+    </a>
+{% endif %}
+
+{% if next_example != None %}
+    <a href="{% url 'show_example' dataset_name experiment_name cnnmodel_name relevancy_method_name next_example %}">
+    <div class="floatingButtonRight">
+        <p>Next ></p>
+    </div>
+    </a>
+{% endif %}
+
+{% endblock content %}

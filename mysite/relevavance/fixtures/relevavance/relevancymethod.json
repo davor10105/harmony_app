@@ -1,0 +1,1 @@
+[{"pk": 1, "model": "relevavance.relevancymethod", "fields": {"name": "GradCamAttributor"}}, {"pk": 2, "model": "relevavance.relevancymethod", "fields": {"name": "EpsilonPlusAttributor"}}, {"pk": 3, "model": "relevavance.relevancymethod", "fields": {"name": "GuidedBackpropAttributor"}}]

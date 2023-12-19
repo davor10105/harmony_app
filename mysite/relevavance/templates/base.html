@@ -1,0 +1,21 @@
+
+
+<head>
+    {% load static %}
+<link rel="stylesheet" href="{% static 'relevavance/style.css' %}">
+<script type="text/javascript" src="{% static 'relevavance/utils.js' %}"></script>
+</head>
+
+<body>
+    <div class="header">
+        <h1><b>
+        HARMONY
+        </b></h1>
+        <a href="/relevance" style="text-decoration:none;">
+        <h2>Home</h2>
+        </a>
+    </div>
+    <div class="content">
+{% block content %}{% endblock content %}
+    </div>
+</body>
