@@ -1,1 +1,1 @@
-[{"pk": 1, "model": "relevavance.cnnmodel", "fields": {"name": "VGG"}}]
+[{"pk": 1, "model": "relevavance.cnnmodel", "fields": {"name": "VGG"}}, {"pk": 2, "model": "relevavance.cnnmodel", "fields": {"name": "ResNet"}}]
