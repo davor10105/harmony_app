@@ -1,0 +1,33 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: >-
+  Evaluating Harmony: Neural Network Explanation Metrics and
+  Human Perception
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Davor Vukadin
+    email: davor.vukadin@fer.hr
+    affiliation: >-
+      Faculty of Electrical Engineering and Computing,
+      University of Zagreb
+    orcid: 'https://orcid.org/0000-0003-3309-6718'
+repository-code: 'https://github.com/davor10105/harmony_app'
+abstract: >-
+  This repository contains the source code for a new method
+  of evaluating the alignment between human perception and
+  evaluation metrics for attribution-based methods. It also
+  provides expert annotations for assessing the quality of
+  attribution methods.
+keywords:
+  - xai
+  - evaluation metric
+  - alignment
+  - dataset
+  - human perception
+license: Apache-2.0
+date-released: '2024-05-23'
