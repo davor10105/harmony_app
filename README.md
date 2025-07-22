@@ -1,4 +1,7 @@
-# Evaluating Harmony: Neural Network Explanation Metrics and Human Perception
+<p align="center">
+<img src="images/harmony.png" alt="harmony logo" height="120px"/> 
+<h1>Evaluating Harmony: Neural Network Explanation Metrics and Human Perception</h1>
+</p>
 
 This repository contains the source code for a new method of evaluating the alignment between human perception and evaluation metrics for attribution-based methods.
 
